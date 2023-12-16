@@ -4,13 +4,36 @@
 }
 
 body{
-    background-color: rgb(94, 157, 0);
+    background: rgb(11,136,250);
+    background: linear-gradient(90deg, rgba(11,136,250,1) 0%, rgba(81,0,255,1) 100%);
+    overflow: hidden;
 }
 
 #countdown{
-    color: goldenrod;
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     font-size: 80px;
-    margin-left: 80px; 
-    margin-top: 20%;
+    transform: translateY(300px);
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.raindrop {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('./Snow.png') no-repeat center center;
+    background-size: contain;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-20px); /* Parti da un po' sopra il top della finestra */
+    }
+    to {
+        transform: translateY(100vh); /* Vai fino al fondo della finestra */
+    }
 }
